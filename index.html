@@ -5,24 +5,26 @@
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
 
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-assets>
-        <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
-        <img id="texture" src="texture.png">
-      </a-assets>
+  <body style="margin: 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+    
+    <a-assets>
+      <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
+      <img id="texture" src="texture.png">
+    </a-assets>
 
-      <a-marker preset="hiro">
-        <a-entity 
-          obj-model="obj: #tree-obj;" 
-          material="src: #texture" 
-          position="0 0 -1" 
-          rotation="0 90 0" 
-          scale="3 3 3">
-        </a-entity>
-      </a-marker>
+    <a-marker preset="hiro">
+      <a-entity
+        obj-model="obj: #tree-obj;"
+        material="src: #texture"
+        position="0 0 -1"
+        rotation="0 90 0"
+        scale="3 3 3">
+      </a-entity>
+    </a-marker>
 
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
+    <a-entity camera></a-entity>
+
+  </a-scene>
+</body>
+
