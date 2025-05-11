@@ -2,42 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AR Tree + Box Test</title>
+    <title>AR Tree + Box</title>
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
-
-      <!-- Load the OBJ model -->
+      <!-- Load the .obj model -->
       <a-assets>
-        <a-asset-item id="Tree1-obj" src="Tree1.obj"></a-asset-item>
+        <a-asset-item id="tree-obj" src="Tree1.obj"></a-asset-item>
       </a-assets>
 
-      <!-- Marker -->
       <a-marker preset="hiro">
-        
-        <!-- Blue Box (Left Side) -->
+        <!-- Test box on the left -->
         <a-box position="-1 0.25 0" color="#4CC3D9" rotation="0 45 0" scale="1 1 1">
           <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite"></a-animation>
         </a-box>
 
-        <!-- Tree Model (Right Side) -->
-        <a-entity 
-          obj-model="obj: #Tree1-obj" 
-          position="1 0 0" 
-          rotation="0 90 0" 
-          scale="0.5 0.5 0.5">
+        <!-- Your tree model on the right -->
+        <a-entity
+          obj-model="obj: #tree-obj"
+          position="1 0 0"
+          rotation="0 180 0"
+          scale="0.2 0.2 0.2">
         </a-entity>
-
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
 
 
 
