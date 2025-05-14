@@ -2,10 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AR with Tree1.obj</title>
+    <title>AR Scene</title>
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <!-- Set custom background -->
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: url('floor.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
   </head>
+
 
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
